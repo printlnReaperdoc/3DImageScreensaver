@@ -1,0 +1,17 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
+
+html, body, #root {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #000000;
+  font-family: 'Tahoma', 'Segoe UI', 'MS Sans Serif', Geneva, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}

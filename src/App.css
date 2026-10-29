@@ -1,0 +1,509 @@
+/* Windows 98 / 2000 / XP Classic 3D Theme */
+
+:root {
+  --win-bg: #d4d0c8;
+  --win-light: #ffffff;
+  --win-med-dark: #808080;
+  --win-dark: #404040;
+  --win-title-start: #000080;
+  --win-title-end: #1084d0;
+  --win-text: #000000;
+  --win-disabled: #888888;
+}
+
+.screensaver-app {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: #000000;
+}
+
+/* Modal Backdrop for sub-dialogs */
+.win-modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+/* Windows Dialog Window */
+.win-dialog-container {
+  user-select: none;
+}
+
+.win-dialog {
+  background: var(--win-bg);
+  border-top: 2px solid var(--win-light);
+  border-left: 2px solid var(--win-light);
+  border-right: 2px solid var(--win-dark);
+  border-bottom: 2px solid var(--win-dark);
+  box-shadow: 2px 2px 0 var(--win-med-dark), 4px 6px 18px rgba(0, 0, 0, 0.45);
+  padding: 3px;
+  font-family: 'Tahoma', 'Segoe UI', 'MS Sans Serif', sans-serif;
+  color: var(--win-text);
+  font-size: 11px;
+}
+
+/* Title Bar */
+.win-titlebar {
+  background: linear-gradient(90deg, var(--win-title-start), var(--win-title-end));
+  color: #ffffff;
+  padding: 3px 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: grab;
+  font-weight: bold;
+  font-size: 11px;
+  letter-spacing: 0.2px;
+}
+
+.win-titlebar:active {
+  cursor: grabbing;
+}
+
+.win-titlebar-text {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
+}
+
+.win-icon {
+  font-size: 13px;
+}
+
+.win-titlebar-controls {
+  display: flex;
+  gap: 2px;
+}
+
+.win-titlebar-btn {
+  width: 16px;
+  height: 14px;
+  line-height: 12px;
+  font-size: 9px;
+  font-weight: bold;
+  background: var(--win-bg);
+  color: #000;
+  border-top: 1px solid var(--win-light);
+  border-left: 1px solid var(--win-light);
+  border-right: 1px solid var(--win-dark);
+  border-bottom: 1px solid var(--win-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+}
+
+.win-titlebar-btn:active {
+  border-top: 1px solid var(--win-dark);
+  border-left: 1px solid var(--win-dark);
+  border-right: 1px solid var(--win-light);
+  border-bottom: 1px solid var(--win-light);
+}
+
+.win-dialog-content {
+  padding: 10px 8px 8px 8px;
+}
+
+/* Groupbox & Legend */
+.win-groupbox {
+  border: 2px groove #ffffff;
+  padding: 8px 10px 10px 10px;
+  margin-top: 4px;
+  position: relative;
+  background: var(--win-bg);
+}
+
+.win-legend {
+  font-weight: normal;
+  padding: 0 4px;
+  font-size: 11px;
+  color: #000;
+  position: relative;
+  top: -2px;
+}
+
+/* Radio & Checkbox */
+.win-radio-label, .win-checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.win-radio-label input, .win-checkbox-label input {
+  margin: 0;
+  cursor: pointer;
+}
+
+/* Classic Button */
+.win-btn {
+  background: var(--win-bg);
+  border-top: 2px solid var(--win-light);
+  border-left: 2px solid var(--win-light);
+  border-right: 2px solid var(--win-dark);
+  border-bottom: 2px solid var(--win-dark);
+  box-shadow: 1px 1px 0 var(--win-med-dark);
+  padding: 3px 12px;
+  font-size: 11px;
+  font-family: inherit;
+  color: #000;
+  cursor: pointer;
+  min-width: 74px;
+  text-align: center;
+  outline: none;
+}
+
+.win-btn:active {
+  border-top: 2px solid var(--win-dark);
+  border-left: 2px solid var(--win-dark);
+  border-right: 2px solid var(--win-light);
+  border-bottom: 2px solid var(--win-light);
+  padding: 4px 11px 2px 13px;
+}
+
+.win-btn.primary {
+  outline: 1px solid #000;
+  outline-offset: -3px;
+}
+
+.win-btn:disabled {
+  color: var(--win-disabled);
+  text-shadow: 1px 1px 0 var(--win-light);
+  cursor: not-allowed;
+}
+
+/* Inset Panels & Inputs */
+.win-inset-panel {
+  border-top: 2px solid var(--win-med-dark);
+  border-left: 2px solid var(--win-med-dark);
+  border-right: 2px solid var(--win-light);
+  border-bottom: 2px solid var(--win-light);
+  background: #ffffff;
+}
+
+.win-input, .win-select {
+  border-top: 2px solid var(--win-med-dark);
+  border-left: 2px solid var(--win-med-dark);
+  border-right: 2px solid var(--win-light);
+  border-bottom: 2px solid var(--win-light);
+  background: #ffffff;
+  padding: 2px 4px;
+  font-size: 11px;
+  font-family: inherit;
+  color: #000;
+  outline: none;
+}
+
+.win-select {
+  height: 22px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.win-input:focus, .win-select:focus {
+  outline: 1px dotted #000;
+}
+
+.win-input:disabled {
+  background: #e4e0d8;
+  color: #888;
+}
+
+/* Slider / Trackbar */
+.win-slider-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.win-slider-label {
+  font-size: 10px;
+  color: #444;
+}
+
+.win-slider {
+  flex: 1;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+  height: 20px;
+}
+
+.win-slider::-webkit-slider-runnable-track {
+  height: 4px;
+  background: #808080;
+  border-bottom: 1px solid #ffffff;
+  border-right: 1px solid #ffffff;
+}
+
+.win-slider::-webkit-slider-thumb {
+  appearance: none;
+  width: 12px;
+  height: 20px;
+  background: var(--win-bg);
+  border-top: 2px solid var(--win-light);
+  border-left: 2px solid var(--win-light);
+  border-right: 2px solid var(--win-dark);
+  border-bottom: 2px solid var(--win-dark);
+  margin-top: -8px;
+  cursor: pointer;
+}
+
+/* Listboxes */
+.win-listbox {
+  border-top: 2px solid var(--win-med-dark);
+  border-left: 2px solid var(--win-med-dark);
+  border-right: 2px solid var(--win-light);
+  border-bottom: 2px solid var(--win-light);
+  background: #ffffff;
+  overflow-y: auto;
+}
+
+.win-list-item {
+  padding: 3px 6px;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.win-list-item:hover {
+  background: #eef3fa;
+}
+
+.win-list-item.active {
+  background: #000080;
+  color: #ffffff;
+}
+
+/* Actions Row */
+.win-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Color Palette Grid */
+.win-color-palette-grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 3px;
+  padding: 4px;
+  background: #ffffff;
+  border-top: 2px solid var(--win-med-dark);
+  border-left: 2px solid var(--win-med-dark);
+  border-right: 2px solid var(--win-light);
+  border-bottom: 2px solid var(--win-light);
+}
+
+.win-color-swatch {
+  height: 22px;
+  cursor: pointer;
+  border: 1px solid #000;
+}
+
+.win-color-swatch:hover {
+  outline: 2px solid #000;
+}
+
+.win-color-swatch.active {
+  outline: 2px solid #000080;
+  outline-offset: 1px;
+}
+
+/* Dropzone */
+.win-dropzone {
+  border: 2px dashed #808080;
+  background: #f7f6f0;
+  padding: 18px 12px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.win-dropzone:hover, .win-dropzone.dragging {
+  background: #e6f0fa;
+  border-color: #000080;
+}
+
+/* Presets Grid */
+.win-preset-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 6px;
+}
+
+.win-preset-btn {
+  display: flex;
+  align-items: center;
+  padding: 6px 8px;
+  background: #f5f4ed;
+  border-top: 2px solid var(--win-light);
+  border-left: 2px solid var(--win-light);
+  border-right: 2px solid var(--win-dark);
+  border-bottom: 2px solid var(--win-dark);
+  cursor: pointer;
+  font-size: 11px;
+  text-align: left;
+}
+
+.win-preset-btn:hover {
+  background: #e8ecf2;
+}
+
+.win-preset-btn.active {
+  border-top: 2px solid var(--win-dark);
+  border-left: 2px solid var(--win-dark);
+  border-right: 2px solid var(--win-light);
+  border-bottom: 2px solid var(--win-light);
+  background: #dce4ef;
+  font-weight: bold;
+}
+
+/* Retro Taskbar */
+.win-taskbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 36px;
+  background: var(--win-bg);
+  border-top: 2px solid var(--win-light);
+  display: flex;
+  align-items: center;
+  padding: 0 4px;
+  gap: 6px;
+  z-index: 900;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.35);
+}
+
+.win-taskbar-btn {
+  background: var(--win-bg);
+  border-top: 2px solid var(--win-light);
+  border-left: 2px solid var(--win-light);
+  border-right: 2px solid var(--win-dark);
+  border-bottom: 2px solid var(--win-dark);
+  padding: 3px 10px;
+  font-size: 11px;
+  font-family: inherit;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  height: 26px;
+}
+
+.win-taskbar-btn:active, .win-taskbar-btn.active {
+  border-top: 2px solid var(--win-dark);
+  border-left: 2px solid var(--win-dark);
+  border-right: 2px solid var(--win-light);
+  border-bottom: 2px solid var(--win-light);
+  background: #ece8df;
+  padding: 4px 9px 2px 11px;
+}
+
+.win-taskbar-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: 10px;
+  font-size: 11px;
+}
+
+.win-status-badge {
+  background: #ffffff;
+  border-top: 1px solid var(--win-med-dark);
+  border-left: 1px solid var(--win-med-dark);
+  border-right: 1px solid var(--win-light);
+  border-bottom: 1px solid var(--win-light);
+  padding: 2px 6px;
+  font-size: 10px;
+  color: #333;
+}
+
+.win-tray {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  border-top: 1px solid var(--win-med-dark);
+  border-left: 1px solid var(--win-med-dark);
+  border-right: 1px solid var(--win-light);
+  border-bottom: 1px solid var(--win-light);
+  padding: 2px 6px;
+  height: 26px;
+}
+
+.win-tray-btn {
+  background: transparent;
+  border: none;
+  font-size: 11px;
+  cursor: pointer;
+  padding: 2px 4px;
+}
+
+.win-tray-btn.active {
+  background: #000080;
+  color: #ffffff;
+}
+
+/* Fullscreen Screensaver Wakeup Hint */
+.win-screensaver-hint {
+  position: fixed;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(20, 20, 20, 0.85);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  padding: 8px 18px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.6);
+  z-index: 1500;
+  animation: fadeInOut 3s forwards;
+  pointer-events: none;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translate(-50%, 10px); }
+  15% { opacity: 1; transform: translate(-50%, 0); }
+  80% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/* Global Drag Overlay */
+.win-drag-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 32, 96, 0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3000;
+  backdrop-filter: blur(2px);
+}
+
+.win-drag-modal {
+  background: var(--win-bg);
+  border: 4px double #ffffff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+  padding: 36px 48px;
+  text-align: center;
+}
